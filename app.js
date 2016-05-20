@@ -13,21 +13,49 @@
 		// 		window.location = $select.val();
 		// 	});
 
-		$("#loadAnalog").click(function(){
-		    $("#list").load("analog.html", function(responseTxt, statusTxt, xhr){
-		    });
-				$('html, body').animate({
+		// $('.product-link').click(function(){
+		// 	var productid = $(this).attr('data-linkId');
+		// 	alert(productid);
+		// });
+
+		// var trigger = $('#sidenav ul li a'),
+		// 	container = $('#list');
+
+		// 	trigger.on('click', function(){
+		// 		var $this = $(this),
+		// 			linkId = $this.data('linkId');
+		// 			alert(linkId);
+
+		// 			container.load(linkId + '.html');
+
+		// 			return false;
+		// 	});
+
+		$('#sidenav ul li a').on('click', function(){
+			var page = $(this).attr('href');
+			$('#list').load(page + '.html');
+
+			$('html, body').animate({
 				    scrollTop: $("#list").offset().top
 				}, 1000);
+			return false;
 		});
 
-		$("#loadIp").click(function(){
-		    $("#list").load("ipcamera.html", function(responseTxt, statusTxt, xhr){
-		    });
-				$('html, body').animate({
-				    scrollTop: $("#list").offset().top
-				}, 1000);
-		});
+		// $("#loadAnalog").click(function(){
+		//     $("#list").load("analog.html", function(responseTxt, statusTxt, xhr){
+		//     });
+		// 		$('html, body').animate({
+		// 		    scrollTop: $("#list").offset().top
+		// 		}, 1000);
+		// });
+
+		// $("#loadIp").click(function(){
+		//     $("#list").load("ipcamera.html", function(responseTxt, statusTxt, xhr){
+		//     });
+		// 		$('html, body').animate({
+		// 		    scrollTop: $("#list").offset().top
+		// 		}, 1000);
+		// });
 
 		// $("#toTop").click(function(){
 		// 		$('html, body').animate({
